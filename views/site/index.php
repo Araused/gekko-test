@@ -14,7 +14,7 @@ $this->title = 'Главная';
     <p class="lead my-4">
         Перед вами результат выполнения тестового задания для <b>«Gekko»</b>
         <br>
-        Исходный код приложения можно посмотреть <a href="https://github.com/Araused/parser-test" target="_blank">тут</a>
+        Исходный код приложения можно посмотреть <a href="https://github.com/Araused/gekko-test" target="_blank">тут</a>
         <br>
         Загружено html-файлов: <b class="text-success"><?= $count ?></b>
     </p>
