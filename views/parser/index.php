@@ -86,30 +86,4 @@ $bsIcon = function (string $name) {
             ],
         ],
     ]) ?>
-
-    <!--<table class="table table-striped">
-        <thead>
-            <th>Дата загрузки</th>
-            <th>Исходное имя файла</th>
-            <th></th>
-        </thead>
-        <tbody>
-            <?php if (empty($uploadSummary)): ?>
-                <tr class="table-secondary">
-                    <td colspan="3" class="text-center">
-                        <i>- Файлы не найдены -</i>
-                    </td>
-                </tr>
-            <?php else: ?>
-                <?php foreach ($uploadSummary as $fileInfo): ?>
-
-                    <tr>
-                        <td><i><?= $fileInfo['uploadAt'] ?></i></td>
-                        <td><code><?= $fileInfo['originalName'] ?></code></td>
-                        <td><?= Html::a('Построить график', ['/parser/chart', 'name' => $fileInfo['fullName']]) ?></td>
-                    </tr>
-                <?php endforeach; ?>
-            <?php endif; ?>
-        </tbody>
-    </table>-->
 </div>

@@ -14,9 +14,9 @@ $bsIcon = function (string $name) {
 };
 
 $homeLabel = $bsIcon('house') . ' Главная';
+$parserLabel = $bsIcon('tools') . ' Парсер';
 $loginLabel = $bsIcon('box-arrow-in-right') . ' Войти';
 $logoutLabel = $bsIcon('box-arrow-right') . ' Выйти [' . (Yii::$app->user->identity->username ?? "") . ']';
-$parserLabel = $bsIcon('tools') . ' Парсер';
 
 $logoutButton = Html::submitButton($logoutLabel, ['class' => 'nav-link btn btn-link logout']);
 
@@ -31,10 +31,10 @@ $logoutHtml = Html::tag(
         'brandLabel' => Yii::$app->name,
         'brandUrl' => Yii::$app->homeUrl,
         'options' => ['class' => 'navbar-expand-md navbar-dark bg-dark fixed-top'],
-    ]);
-    echo Nav::widget([
-        'options' => ['class' => 'navbar-nav ms-auto'],
+    ]) ?>
+    <?= Nav::widget([
         'encodeLabels' => false,
+        'options' => ['class' => 'navbar-nav ms-auto'],
         'items' => [
             ['label' => $homeLabel, 'url' => ['/site/index']],
             ['label' => $parserLabel, 'url' => ['/parser/index'], 'visible' => !Yii::$app->user->isGuest],
@@ -42,7 +42,6 @@ $logoutHtml = Html::tag(
                 ? ['label' => $loginLabel, 'url' => ['/site/login']]
                 : $logoutHtml,
         ],
-    ]);
-    NavBar::end();
-    ?>
+    ]) ?>
+    <?php NavBar::end() ?>
 </header>
