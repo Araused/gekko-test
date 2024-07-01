@@ -104,5 +104,4 @@ class ParserController extends Controller
 
         throw new NotFoundHttpException('HTML-файл не найден.');
     }
-
 }
